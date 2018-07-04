@@ -24,8 +24,8 @@ class PostController extends Controller
     }
     public function index()
     {   $categories = Category::all();
-        $posts = Post::orderBy('id','desc')->paginate(5);
-        $recentPosts = Post::orderBy('created_at','desc')->limit(3)->get();
+        $posts = Post::orderBy('id','desc')->paginate(6);
+        $recentPosts = Post::orderBy('created_at','desc')->limit(4)->get();
         return view('blog.posts.index')
         ->withPosts($posts)
         ->withCategories($categories)

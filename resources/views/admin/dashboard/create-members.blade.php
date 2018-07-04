@@ -110,7 +110,7 @@
             CKEDITOR.replace( 'biography' );
             $('.date').datepicker({
 
-                       format: 'mm-dd-yyyy',
+                       format: 'mm/dd/yyyy',
                        todayHighlight: true,
                        autoclose: true,
 

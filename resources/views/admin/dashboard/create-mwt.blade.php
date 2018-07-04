@@ -41,7 +41,7 @@
                  <label for="dob">Date</label>
              </div>
              <div class="col-md-10">
-                 <input type="text" name="time" class="date form-control" id="time" placeholder="mm/dd/yyyy">
+                 <input type="text" name="time" class="chi form-control" id="time">
              </div>
          </div>
         </div>
@@ -73,7 +73,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/js/bootstrap-datepicker.min.js"></script>
         <script>
 
-            $('.date').datepicker({
+            $('.chi').datepicker({
 
                        format: 'mm-dd-yyyy',
                        todayHighlight: true,

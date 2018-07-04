@@ -23,7 +23,7 @@
             @else
 
                 <div class="dropdown">
-                    <a style="color:black;" id="navbarDropdown drop-nav" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    <a style="color:white;" id="navbarDropdown drop-nav" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         Hello {{ Auth::user()->name }} <span class="caret"></span>
                     </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">

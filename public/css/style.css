@@ -17,14 +17,14 @@ body {
 }
 
 a {
-    color: #d0ac04;
+    color: #5bc0de;
     transition: 0.5s;
 }
 
 a:hover,
 a:active,
 a:focus {
-    color: #d0ac04;
+    color: #5bc0de;
     outline: none;
     text-decoration: none;
 }
@@ -52,7 +52,7 @@ h6 {
 .back-to-top {
     position: fixed;
     display: none;
-    background: #d0ac04;
+    background: #5bc0de;
     color: #fff;
     display: inline-block;
     width: 44px;
@@ -126,7 +126,7 @@ h6 {
     color: #fff;
     padding-left: 10px;
     margin-left: 70px;
-    border-left: 4px solid #d0ac04;
+    border-left: 4px solid #5bc0de;
 }
 
 #header #logo img {
@@ -276,12 +276,12 @@ h6 {
     transition: 0.5s;
     margin: 10px;
     color: #fff;
-    background: #d0ac04;
+    background: #5bc0de;
 }
 
 #intro .btn-get-started:hover {
     background: #fff;
-    color: #d0ac04;
+    color: #5bc0de;
 }
 
 
@@ -387,7 +387,7 @@ h6 {
 
 .nav-menu li:hover>a,
 .nav-menu>.menu-active>a {
-    color: #d0ac04;
+    color: #5bc0de;
 }
 
 .nav-menu>li {
@@ -415,7 +415,7 @@ h6 {
 }
 
 .nav-menu ul li:hover>a {
-    color: #d0ac04;
+    color: #5bc0de;
 }
 
 .nav-menu ul ul {
@@ -509,7 +509,7 @@ h6 {
 }
 
 #mobile-nav ul .menu-has-children i.fa-chevron-up {
-    color: #d0ac04;
+    color: #5bc0de;
 }
 
 #mobile-nav ul .menu-has-children li a {
@@ -517,7 +517,7 @@ h6 {
 }
 
 #mobile-nav ul .menu-item-active {
-    color: #d0ac04;
+    color: #5bc0de;
 }
 
 #mobile-body-overly {
@@ -582,7 +582,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     display: block;
     width: 40px;
     height: 3px;
-    background: #d0ac04;
+    background: #5bc0de;
     bottom: 0;
     left: calc(50% - 20px);
 }
@@ -618,7 +618,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #featured-services i {
-    color: #d0ac04;
+    color: #5bc0de;
     font-size: 48px;
     display: inline-block;
     line-height: 1;
@@ -635,7 +635,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #featured-services h4 a:hover {
-    color: #d0ac04;
+    color: #5bc0de;
 }
 
 #featured-services p {
@@ -693,7 +693,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding-top: 8px;
     text-align: center;
     position: absolute;
-    background-color: #d0ac04;
+    background-color: #5bc0de;
     border-radius: 50%;
     text-align: center;
     border: 4px solid #fff;
@@ -714,7 +714,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #about .about-col:hover i {
-    color: #d0ac04;
+    color: #5bc0de;
 }
 
 #about .about-col h2 {
@@ -731,7 +731,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #about .about-col h2 a:hover {
-    color: #d0ac04;
+    color: #5bc0de;
 }
 
 #about .about-col p {
@@ -761,7 +761,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #services .icon i {
-    color: #d0ac04;
+    color: #5bc0de;
     font-size: 36px;
     line-height: 1;
     transition: 0.5s;
@@ -779,7 +779,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #services .box:hover .title a {
-    color: #d0ac04;
+    color: #5bc0de;
 }
 
 #services .description {
@@ -825,8 +825,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #call-to-action .cta-btn:hover {
-    background: #d0ac04;
-    border: 2px solid #d0ac04;
+    background: #5bc0de;
+    border: 2px solid #5bc0de;
 }
 
 
@@ -894,7 +894,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-weight: bold;
     font-size: 48px;
     display: block;
-    color: #d0ac04;
+    color: #5bc0de;
 }
 
 #facts .counters p {
@@ -942,8 +942,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #portfolio #portfolio-flters li:hover,
 #portfolio #portfolio-flters li.filter-active {
-    background: #d0ac04;
+    background: #5bc0de;
     color: #fff;
+}
+
+a#mwt-link {
+    color: #5bc0de !important;
+}
+
+a:hover#mwt-link {
+    color: white !important;
 }
 
 #portfolio #portfolio-flters li:last-child {
@@ -1002,7 +1010,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #portfolio .portfolio-item figure .link-preview:hover,
 #portfolio .portfolio-item figure .link-details:hover {
-    background: #d0ac04;
+    background: #5bc0de;
 }
 
 #portfolio .portfolio-item figure .link-preview:hover i,
@@ -1051,7 +1059,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #portfolio .portfolio-item .portfolio-info h4 a:hover {
-    color: #d0ac04;
+    color: #5bc0de;
 }
 
 #portfolio .portfolio-item .portfolio-info p {
@@ -1098,7 +1106,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #clients .owl-dot.active {
-    background-color: #d0ac04;
+    background-color: #5bc0de;
 }
 
 
@@ -1179,7 +1187,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #testimonials .owl-dot.active {
-    background-color: #d0ac04;
+    background-color: #5bc0de;
 }
 
 
@@ -1251,7 +1259,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #team .member .social a:hover {
-    color: #18d26e;
+    color: #5bc0de;
 }
 
 #team .member .social i {
@@ -1276,7 +1284,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-size: 48px;
     display: inline-block;
     margin-bottom: 10px;
-    color: #d0ac04;
+    color: #5bc0de;
 }
 
 #contact .contact-info address,
@@ -1298,7 +1306,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #contact .contact-info a:hover {
-    color: #d0ac04;
+    color: #5bc0de;
 }
 
 #contact .contact-address,
@@ -1323,8 +1331,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #contact .form #sendmessage {
-    color: #d0ac04;
-    border: 1px solid #d0ac04;
+    color: #5bc0de;
+    border: 1px solid #5bc0de;
     display: none;
     text-align: center;
     padding: 15px;
@@ -1365,7 +1373,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #contact .form button[type="button"] {
-    background: #d0ac04;
+    background: #5bc0de;
     border: 0;
     padding: 10px 30px;
     color: #fff;
@@ -1374,7 +1382,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #contact .form button[type="button"]:hover {
-    background: #13a456;
+    background: #5bc0de;
 }
 
 
@@ -1406,7 +1414,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     letter-spacing: 3px;
-    border-left: 4px solid #d0ac04;
+    border-left: 4px solid #5bc0de;
 }
 
 #footer .footer-top .footer-info p {
@@ -1433,7 +1441,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top .social-links a:hover {
-    background: #d0ac04;
+    background: #5bc0de;
     color: #fff;
 }
 
@@ -1461,7 +1469,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top h4::after {
-    background: #d0ac04;
+    background: #5bc0de;
     width: 60px;
 }
 
@@ -1494,7 +1502,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top .footer-links ul a:hover {
-    color: #d0ac04;
+    color: #5bc0de;
 }
 
 #footer .footer-top .footer-contact {
@@ -1516,7 +1524,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top .footer-newsletter input[type="submit"] {
-    background: #d0ac04;
+    background: #5bc0de;
     border: 0;
     width: 35%;
     padding: 6px 0;
@@ -1527,7 +1535,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top .footer-newsletter input[type="submit"]:hover {
-    background: #d0ac04;
+    background: #5bc0de;
 }
 
 #footer .copyright {

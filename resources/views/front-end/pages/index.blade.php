@@ -19,7 +19,7 @@
                       </div>
                     </div>
                   </div>
-    
+
 <div class="carousel-item">
   <div class="carousel-background"><img src="img/intro-carousel/2.jpg" alt=""></div>
   <div class="carousel-container">
@@ -30,7 +30,7 @@
     </div>
   </div>
 </div>
-            
+
 <div class="carousel-item">
   <div class="carousel-background"><img src="img/intro-carousel/3.jpg" alt=""></div>
   <div class="carousel-container">
@@ -41,7 +41,7 @@
     </div>
   </div>
 </div>
-            
+
 <div class="carousel-item">
   <div class="carousel-background"><img src="img/intro-carousel/4.jpg" alt=""></div>
   <div class="carousel-container">
@@ -52,7 +52,7 @@
     </div>
   </div>
 </div>
-            
+
 <div class="carousel-item">
   <div class="carousel-background"><img src="img/intro-carousel/5.jpg" alt=""></div>
     <div class="carousel-container">
@@ -64,7 +64,7 @@
   </div>
   </div>
 </div>
-            
+
 <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
   <span class="carousel-control-prev-icon ion-chevron-left" aria-hidden="true"></span>
   <span class="sr-only">Previous</span>
@@ -74,7 +74,7 @@
   <span class="carousel-control-next-icon ion-chevron-right" aria-hidden="true"></span>
   <span class="sr-only">Next</span>
 </a>
-            
+
     </div>
   </div>
 </section><!-- #intro -->
@@ -88,23 +88,23 @@
                           <h4 class="title"><a href="">Lorem Ipsum Delino</a></h4>
                           <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
                         </div>
-                    
+
                   <div class="col-lg-4 box box-bg">
                     <i class="ion-ios-stopwatch-outline"></i>
                     <h4 class="title"><a href="">Dolor Sitema</a></h4>
                     <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
                   </div>
-                    
+
                   <div class="col-lg-4 box">
                     <i class="ion-ios-heart-outline"></i>
                     <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
                     <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
                   </div>
-                    
+
     </div>
   </div>
 </section><!-- #featured-services -->
-                    
+
                         <!--==========================
                           About Us Section
                         ============================-->
@@ -123,7 +123,7 @@
               </div>
               <h2 class="title"><a href="#">Our Mission</a></h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Demonstrating God's love through mutual creation and development of great ideas dedicated to our collective growth
               </p>
             </div>
           </div>
@@ -149,7 +149,7 @@
             </div>
             <h2 class="title"><a href="#">Our Vision</a></h2>
             <p>
-              Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+              To build a Formidable force of great minds knitted in love for kingdom exploits and impacts
             </p>
           </div>
         </div>
@@ -211,18 +211,18 @@
   <!--==========================
     Call To Action Section
   ============================-->
-  <section id="call-to-action" class="wow fadeIn">
+  {{-- <section id="call-to-action" class="wow fadeIn">
     <div class="container text-center">
       <h3>Call To Action</h3>
       <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <a class="cta-btn" href="#">Call To Action</a>
     </div>
-  </section><!-- #call-to-action -->
+  </section><!-- #call-to-action --> --}}
 
   <!--==========================
     Skills Section
   ============================-->
-  <section id="skills">
+  {{-- <section id="skills">
     <div class="container">
 
       <header class="section-header">
@@ -259,12 +259,12 @@
       </div>
 
     </div>
-  </section>
+  </section> --}}
 
   <!--==========================
     Facts Section
   ============================-->
-  <section id="facts"  class="wow fadeIn">
+  {{-- <section id="facts"  class="wow fadeIn">
     <div class="container">
 
       <header class="section-header">
@@ -301,12 +301,12 @@
       </div>
 
     </div>
-  </section><!-- #facts -->
+  </section><!-- #facts --> --}}
 
   <!--==========================
     Begin Portfolio Section
   ============================-->
-  
+
     @include('front-end.pages.mwt')
 
  <!--==========================
@@ -316,7 +316,7 @@
   <!--==========================
     Clients Section Begins
   ============================-->
-  <section id="clients" class="wow fadeInUp">
+  {{-- <section id="clients" class="wow fadeInUp">
     <div class="container">
 
       <header class="section-header">
@@ -335,7 +335,8 @@
       </div>
 
     </div>
-  </section><!-- #clients -->
+  </section> --}}
+  <!-- #clients -->
 
   <!--==========================
     Clients Section Ends

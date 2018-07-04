@@ -91,5 +91,4 @@
       </div>
     </div>
 
-    @ckeditor('comment')
 @endsection

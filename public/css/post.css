@@ -14,7 +14,7 @@
         margin-right: 10px;
         top: 0px;
         left: 80px;
-        color: black;
+        color: #fff;
         border: none;
         background-color: transparent;
         font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -28,7 +28,7 @@
         margin-right: 10px;
         top: 0px;
         left: 80px;
-        color: black;
+        color: #fff;
         border: none;
         background-color: transparent;
         font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -36,16 +36,16 @@
     
     a#modal-btn {
         text-decoration: none;
-        color: black;
+        color: #fff;
     }
     
     a#modal-btn:hover {
         text-decoration: none;
-        color: #5bc0de;
+        color: #ccc;
     }
     
     button#modal-btn:hover {
-        color: #5bc0de !important;
+        color: #ccc !important;
         clear: both;
         cursor: pointer;
     }
@@ -73,8 +73,8 @@
     }
     
     #navbar-style {
-        background: #fff;
-        color: black !important;
+        background: #5bc0de;
+        color: #fff !important;
         -webkit-box-shadow: 5px 5px 7px 0px rgba(0, 0, 0, 0.51);
         -moz-box-shadow: 5px 5px 7px 0px rgba(0, 0, 0, 0.51);
         box-shadow: 5px 5px 7px 0px rgba(0, 0, 0, 0.51);
@@ -105,7 +105,7 @@
     
     #vogbtn {
         position: relative;
-        color: #5bc0de;
+        color: #fff;
         font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
     
@@ -247,7 +247,7 @@
     }
     
     #gsap-img {
-        width: 600px;
+        width: 750px;
         height: 500px;
         position: relative;
         -webkit-box-shadow: 5px 5px 7px 0px rgba(0, 0, 0, 0.51);
