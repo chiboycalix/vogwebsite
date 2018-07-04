@@ -11,6 +11,7 @@
 <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
+
 <!-- Main Stylesheet File -->
 {{Html::style('css/style.css')}}
 
