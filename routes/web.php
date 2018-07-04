@@ -49,7 +49,7 @@ Route::get('mwt/show-mwt/{id}', ['uses'=>'MwtController@show2','as'=>'mwt.show2'
 Route::get('/default', ['uses' => 'DefaultController@index', 'as'=>'default.index']);
 
 //Post routes
-Route::get('posts/create', ['uses'=>'PostController@create','as' =>'posts.create']);
+// Route::get('posts/create', ['uses'=>'PostController@create','as' =>'posts.create']);
 Route::post('posts/store', ['uses'=>'PostController@store', 'as'=>'posts.store']);
 Route::get('posts/show/{id}', ['uses'=>'PostController@show','as'=>'posts.show']);
 Route::get('posts/index', ['uses' =>'PostController@index', 'as'=>'posts.index']);

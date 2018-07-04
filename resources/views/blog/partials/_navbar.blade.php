@@ -28,7 +28,7 @@
                     </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
-                          <a class="dropdown-item" href="{{route('posts.create')}}">New Post</a>
+                          {{-- <a class="dropdown-item" href="{{route('posts.create')}}">New Post</a> --}}
                           <a class="dropdown-item" href="{{route('posts.index')}}">Blog</a>
                           <a class="dropdown-item" href="{{route('pages.index')}}">Main Site</a>
                           <a class="dropdown-item" href="{{ route('logout') }}"
