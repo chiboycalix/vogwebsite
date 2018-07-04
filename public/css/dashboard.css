@@ -23,3 +23,7 @@ button[type="submit"] {
     position: relative;
     left: 105%;
 }
+
+#posts {
+    margin-top: 30px;
+}

@@ -21,7 +21,7 @@
           <a class="dropdown-item" href="{{route('dashboard.create')}}">Add New Member</a>
           <a class="dropdown-item" href="{{route('mwt.create-mwt')}}">Make We Talk</a>
           <a class="dropdown-item" href="{{route('dashboard.create-posts')}}">Create Post</a>
-          <a class="dropdown-item" href="{{route('categories.index')}}">Create Category</a>
+          <a class="dropdown-item" href="{{route('dashboard.create-categories')}}">Create Category</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Logout</a>
           </div>

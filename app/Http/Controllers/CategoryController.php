@@ -14,11 +14,7 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $categories =Category::all();
-        return view('blog.categories.index')->withCategories($categories);
-    }
+
 
     public function showall($id)
     {
@@ -112,7 +108,7 @@ class CategoryController extends Controller
     public function update(Request $request, $id)
     {
         //
-        
+
     }
 
     /**

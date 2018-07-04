@@ -189,12 +189,47 @@ class DashboardController extends Controller
         ->withCategories($categories);
     }
 
-    //create categories
+    //create categories controller functions
     public function create4()
     {
         $categories =Category::all();
-        return view('blog.categories.index')->withCategories($categories);
+        return view('admin.dashboard.create-categories')->withCategories($categories);
     }
+
+    public function store4(Request $request)
+    {
+        $this->validate($request,array(
+            'name' =>'required|max:255',
+            'photo'=>'|image|nullable|max:1999'
+               ));
+
+               if($request->hasFile('photo')){
+                //get file name with extension
+                $filenameWithExt = $request->file('photo')->getClientOriginalName();
+                //get file name
+                $filename = pathinfo($filenameWithExt,PATHINFO_FILENAME);
+                //get file extension
+                $extension = $request->file('photo')->getClientOriginalExtension();
+                //file name to store
+                $fileNameToStore = $filename.'_'.time().'.'.$extension;
+                //upload image
+                $path = $request->file('photo')->storeAs('public/category', $fileNameToStore);
+             }else{
+                 $fileNameToStore = 'noimage.jpg';
+             }
+
+           $category = new Category;
+           $category->name = $request->name;
+           $category->photo = $fileNameToStore;
+           $category->save();
+
+           Session::flash('success','New Category Created!');
+
+           return redirect()->route('dashboard.create-categories')->withCategory($category);
+    }
+
+
+
 
 
     public function edit($id)

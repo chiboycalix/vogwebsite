@@ -39,7 +39,13 @@ Route::get('dashboard/show-mwt/{id}', ['uses'=>'DashboardController@show2','as'=
 Route::get('dashboard/create-posts', ['uses'=>'DashboardController@create3', 'as'=>'dashboard.create-posts']);
 Route::post('dashboard/store-posts', ['uses'=>'DashboardController@store3', 'as'=>'dashboard.store-posts']);
 Route::get('dashboard/show-posts/{id}', ['uses'=>'DashboardController@show3','as'=>'dashboard.show-posts']);
+
 //dashboard routes for categories
+Route::get('dashboard/create-categories', ['uses'=>'DashboardController@create4', 'as'=>'dashboard.create-categories']);
+Route::post('dashboard/store-categories', ['uses'=>'DashboardController@store4', 'as'=>'dashboard.store-categories']);
+Route::get('dashboard/{category}', ['uses'=>'DashboardController@show4','as'=>'dashboard.show-categories']);
+
+
 
 
 //Make we talk routes
@@ -49,7 +55,6 @@ Route::get('mwt/show-mwt/{id}', ['uses'=>'MwtController@show2','as'=>'mwt.show2'
 Route::get('/default', ['uses' => 'DefaultController@index', 'as'=>'default.index']);
 
 //Post routes
-// Route::get('posts/create', ['uses'=>'PostController@create','as' =>'posts.create']);
 Route::post('posts/store', ['uses'=>'PostController@store', 'as'=>'posts.store']);
 Route::get('posts/show/{id}', ['uses'=>'PostController@show','as'=>'posts.show']);
 Route::get('posts/index', ['uses' =>'PostController@index', 'as'=>'posts.index']);
@@ -62,7 +67,6 @@ Route::delete('comments/{id}',['uses'=>'CommentsController@destroy','as'=>'comme
 Route::get('comments/{id}/delete',['uses'=>'CommentsController@delete','as'=>'comments.delete']);
 
 //Categories routes
-Route::resource('categories','CategoryController',['except'=>'create']);
 Route::get('categories/{category}', ['uses'=>'CategoryController@showall', 'as'=>'categories.showall']);
 
 //Authentication
