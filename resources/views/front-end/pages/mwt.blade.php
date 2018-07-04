@@ -8,13 +8,18 @@
       </header>
 
       <div class="row">
-        <div class="col-lg-12">
-          <ul id="portfolio-flters">
+        <div class="col-lg-3 col-lg offset-4" id="mwt-div">
+          {{-- <ul id="portfolio-flters"> --}}
 
-            <li data-filter="*" class="filter-active">Latest</li>
-            <li data-filter=".filter-app"><a href="#" id="mwt-link"> All</a></li>
+            {{-- <li data-filter="*" class="filter-active">Latest</li>
+            <li data-filter=".filter-app"><a href="#" id="mwt-link"> All</a></li> --}}
             {{-- <li data-filter=".filter-app">Card</li>
             <li data-filter=".filter-app">Web</li> --}}
+          {{-- </ul> --}}
+          <ul class="mwt-links">
+            <li><a href="#">Latest</a></li>
+            <li><a href="#">All</a></li>
+
           </ul>
         </div>
       </div>

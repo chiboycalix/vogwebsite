@@ -935,23 +935,53 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: #666666;
     border-radius: 4px;
     text-transform: uppercase;
-    background: #fff;
+    background: #5bc0de;
     margin-bottom: 5px;
     transition: all 0.3s ease-in-out;
 }
 
 #portfolio #portfolio-flters li:hover,
 #portfolio #portfolio-flters li.filter-active {
+    background: #fff;
+    color: #5bc0de;
+}
+
+div#mwt-div {
+    position: relative;
+    left: 8%;
+}
+
+ul.mwt-links {
+    float: left;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+ul.mwt-links li {
+    list-style-type: none;
+    margin: 15px 15px 15px 0;
+    border-radius: 10px;
+    float: left;
+}
+
+ul.mwt-links li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 25px;
+    text-decoration: none;
+    background: #5bc0de;
+}
+
+ul.mwt-links li a:hover {
+    background: white;
+    color: #5bc0de;
+}
+
+ul.mwt-links li a:active {
     background: #5bc0de;
     color: #fff;
-}
-
-a#mwt-link {
-    color: #5bc0de !important;
-}
-
-a:hover#mwt-link {
-    color: white !important;
 }
 
 #portfolio #portfolio-flters li:last-child {
