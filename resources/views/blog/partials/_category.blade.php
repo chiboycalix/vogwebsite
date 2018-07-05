@@ -10,17 +10,17 @@
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
-                    <div class="modal-body">
-                            <div class="row">
+                    <div class="modal-body" id="test">
+                            <div class="row" >
                               @foreach($categories as $category)
-                                 <div class="col-md-3">
+                                 <div class="col-md-3" id="please">
                                  <a href="{{route('categories.showall',$category->id)}}">
-                                        <img class="myclass1" src="/storage/category/{{$category->photo}}" >
-                                          <p class="lead">{{$category->name}}</p>
+                                    <img class="myclass1" src="/storage/category/{{$category->photo}}">
+                                          <p class="lead" id="nono">{{$category->name}}</p>
                                     </a>
                                  </div>
                                @endforeach
-                              </div> 
+                              </div>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

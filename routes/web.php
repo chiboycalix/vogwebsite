@@ -35,6 +35,9 @@ Route::get('dashboard/create-mwt', ['uses'=>'DashboardController@create2', 'as'=
 Route::post('dashboard/store-mwt', ['uses'=>'DashboardController@store2', 'as'=>'dashboard.store-mwt']);
 Route::get('dashboard/show-mwt/{id}',['uses'=>'DashboardController@show2','as'=>'dashboard.show-mwt']);
 Route::get('dashboard/index-mwt', ['uses'=>'DashboardController@index2','as'=>'dashboard.index-mwt']);
+Route::get('dashboard/edit-mwt/{id}/edit',['uses'=>'DashboardController@edit2', 'as'=>'dashboard.edit-mwt']);
+Route::put('dashboard/update-mwt/{id}',['uses'=>'DashboardController@update2', 'as'=>'dashboard.update-mwt']);
+
 
 //dashboard routes for posts
 Route::get('dashboard/index-posts',['uses'=>'DashboardController@index3','as'=>'dashboard.index-posts']);

@@ -144,6 +144,51 @@ class DashboardController extends Controller
         return view('admin.dashboard.show-mwt')->withMwt($mwt);
     }
 
+    public function edit2($id){
+        $mwt =Mwt::find($id);
+        return view('admin.dashboard.edit-mwt')
+        ->withMwt($mwt);
+    }
+
+    public function update2(Request $request, $id){
+
+               $this->validate($request,array(
+                'topic'=>'required',
+                'speaker'=>'required',
+                'time'=>'required',
+                'body' =>'nullable'
+               ));
+
+
+               if($request->hasFile('photo')){
+                //get file name with extension
+                $filenameWithExt = $request->file('photo')->getClientOriginalName();
+                //get file name
+                $filename = pathinfo($filenameWithExt,PATHINFO_FILENAME);
+                //get file extension
+                $extension = $request->file('photo')->getClientOriginalExtension();
+                //file name to store
+                $fileNameToStore = $filename.'_'.time().'.'.$extension;
+                //upload image
+                $path = $request->file('photo')->storeAs('public/mwt', $fileNameToStore);
+             }
+
+                $mwt =Mwt::find($id);
+                $mwt->topic = $request->topic;
+                $mwt->speaker = $request->speaker;
+                $mwt->time = $request->time;
+                $mwt->body = $request->body;
+
+                if($request->hasFile('photo')){
+                    $mwt->photo =$fileNameToStore;
+                }
+                $mwt->save();
+                Session::flash('success','Make we Talk has been Edited Successfully');
+                return redirect()->route('dashboard.show-mwt', $mwt->id);
+
+            }
+
+
 
 
 

@@ -34,6 +34,10 @@
         font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
     
+    p#nono {
+        color: #5bc0de;
+    }
+    
     a#modal-btn {
         text-decoration: none;
         color: #fff;
