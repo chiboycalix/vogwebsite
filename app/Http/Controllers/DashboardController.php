@@ -89,6 +89,11 @@ class DashboardController extends Controller
 
 
     //create make we talk
+    public function index2(){
+        $mwts =Mwt::all();
+        return view('admin.dashboard.index-mwt')
+        ->withMwts($mwts);
+    }
     public function create2()
     {
         return view('admin.dashboard.create-mwt');
@@ -101,6 +106,7 @@ class DashboardController extends Controller
         'topic'=>'required',
         'speaker'=>'required',
         'photo'=>'|image|nullable|max:1999',
+        'body'=>'nullable',
         'time'=>'required'
     ));
 
@@ -123,6 +129,7 @@ class DashboardController extends Controller
       $mwt->topic = $request->topic;
       $mwt->speaker = $request->speaker;
       $mwt->time = $request->time;
+      $mwt->body = $request->body;
       $mwt->photo = $fileNameToStore;
       $mwt->save();
       Session::flash('success','New Post Added');
@@ -137,8 +144,12 @@ class DashboardController extends Controller
         return view('admin.dashboard.show-mwt')->withMwt($mwt);
     }
 
-    //Create posts
 
+
+
+
+
+    //functions for  posts
     public function index3(){
         $posts =Post::orderBy('id','desc')->get();
         $categories =Category::all();
@@ -146,22 +157,18 @@ class DashboardController extends Controller
         ->withPosts($posts)
         ->withCategories($categories);
     }
-
     public function create3()
     {
         $categories = Category::all();
         return view('admin.dashboard.create-posts')->withCategories($categories);
     }
-
     public function store3(Request $request)
     {
-
         $this->validate($request,array(
             'title'=>'required',
             'photo'=>'|image|nullable|max:1999',
             'body' =>'required'
         ));
-
 
         if($request->hasFile('photo')){
            //get file name with extension
@@ -327,10 +334,6 @@ class DashboardController extends Controller
 
            return redirect()->route('dashboard.create-categories')->withCategory($category);
     }
-
-
-
-
 
     public function edit($id)
     {

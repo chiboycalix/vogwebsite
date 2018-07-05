@@ -19,6 +19,7 @@ class CreateMwtsTable extends Migration
             $table->string('speaker');
             $table->string('photo');
             $table->string('time');
+            $table->text('body');
             $table->timestamps();
         });
     }

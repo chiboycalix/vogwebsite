@@ -347,6 +347,9 @@
         margin-bottom: 20px;
         width: 100px;
         height: 80px;
+        -webkit-box-shadow: 5px 5px 7px 0px rgba(0, 0, 0, 0.51);
+        -moz-box-shadow: 5px 5px 7px 0px rgba(0, 0, 0, 0.51);
+        box-shadow: 5px 5px 7px 0px rgba(0, 0, 0, 0.51);
     }
     
     a.recent-title {
@@ -370,6 +373,9 @@
         top: 230px;
         width: 270px;
         height: 370px;
+        -webkit-box-shadow: 5px 5px 7px 0px rgba(0, 0, 0, 0.51);
+        -moz-box-shadow: 5px 5px 7px 0px rgba(0, 0, 0, 0.51);
+        box-shadow: 5px 5px 7px 0px rgba(0, 0, 0, 0.51);
     }
     
     h4.upcoming-events {

@@ -10,7 +10,7 @@
         <a class="nav-link" href="{{route('dashboard')}}">Home</span></a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link" href="{{route('dashboard.index-posts')}}">Posts </a>
+          <a class="nav-link" href="{{route('dashboard.index-posts')}}">Posts</a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="#">Vogites </a>
@@ -19,7 +19,7 @@
               <a class="nav-link" href="{{route('dashboard.create-categories')}}">Categories</a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="#">Make we talk</a>
+                <a class="nav-link" href="{{route('dashboard.index-mwt')}}">Make we talk</a>
                 </li>
 
         <li class="nav-item dropdown" style="position:absolute; left:87%;">
@@ -30,10 +30,10 @@
             Manage Contents
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="{{route('dashboard.create')}}">Add New Member</a>
+          <a class="dropdown-item" href="{{route('dashboard.create')}}">New Member</a>
           <a class="dropdown-item" href="{{route('mwt.create-mwt')}}">Make We Talk</a>
           <a class="dropdown-item" href="{{route('dashboard.create-posts')}}">Create Post</a>
-          <a class="dropdown-item" href="{{route('dashboard.create-categories')}}">Create Category</a>
+          <a class="dropdown-item" href="{{route('dashboard.create-categories')}}">Add Category</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Logout</a>
           </div>

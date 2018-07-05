@@ -1,6 +1,7 @@
 @extends('admin.layout')
 
 @section('title' ,'| create Make we Talk')
+{{Html::script('https://cdn.ckeditor.com/4.9.2/standard/ckeditor.js')}}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/css/bootstrap-datepicker.min.css">
 @section('content')
 <div class="container">
@@ -47,7 +48,7 @@
         </div>
 
         <div class="form-group">
-            <div class="row">
+         <div class="row">
             <div class="col-md-2">
             <label for="photo">Dispaly Photo</label>
         </div>
@@ -56,6 +57,17 @@
         </div>
          </div>
         </div>
+
+        <div class="form-group">
+                <div class="row">
+                    <div class="col-md-2">
+                 <label for="body">Body</label>
+             </div>
+             <div class="col-md-10">
+                 <textarea name="body" id="body" cols="30" rows="10" class="form-control"></textarea>
+             </div>
+         </div>
+     </div>
 
         <div class="form-group">
            <button type="submit" class="btn btn-success pull-right">Save</button>
@@ -72,13 +84,11 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/js/bootstrap-datepicker.min.js"></script>
         <script>
-
+             CKEDITOR.replace( 'body' );
             $('.chi').datepicker({
-
-                       format: 'mm-dd-yyyy',
-                       todayHighlight: true,
-                       autoclose: true,
-
-                     });
+                format: 'mm-dd-yyyy',
+                todayHighlight: true,
+                autoclose: true,
+             });
         </script>
 @endsection

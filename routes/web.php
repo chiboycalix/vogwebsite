@@ -33,7 +33,8 @@ Route::get('dashboard/show-members/{id}', ['uses'=>'DashboardController@show','a
 //Dashboard routes for make we talk
 Route::get('dashboard/create-mwt', ['uses'=>'DashboardController@create2', 'as'=>'mwt.create-mwt']);
 Route::post('dashboard/store-mwt', ['uses'=>'DashboardController@store2', 'as'=>'dashboard.store-mwt']);
-Route::get('dashboard/show-mwt/{id}', ['uses'=>'DashboardController@show2','as'=>'dashboard.show-mwt']);
+Route::get('dashboard/show-mwt/{id}',['uses'=>'DashboardController@show2','as'=>'dashboard.show-mwt']);
+Route::get('dashboard/index-mwt', ['uses'=>'DashboardController@index2','as'=>'dashboard.index-mwt']);
 
 //dashboard routes for posts
 Route::get('dashboard/index-posts',['uses'=>'DashboardController@index3','as'=>'dashboard.index-posts']);

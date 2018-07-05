@@ -5,11 +5,11 @@
 @section('content')
 
 <div class="row">
-   
-    
+
+
         <div class="col-md-4">
           <div class="card" style="margin:20px; width:400px;">
-              <img src="/storage/mwt/{{$mwt->photo}}" alt="" 
+              <img src="/storage/mwt/{{$mwt->photo}}" alt=""
               style="width:400px;height:400px;"
               class="card-img-top"/>
               <div class="card-body">
