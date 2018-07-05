@@ -6,9 +6,21 @@
 
     <div class="collapse navbar-collapse " id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-        <a class="nav-link" href="{{route('dashboard')}}">Home <span class="sr-only">(current)</span></a>
+        <li class="nav-item ">
+        <a class="nav-link" href="{{route('dashboard')}}">Home</span></a>
         </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="{{route('dashboard.index-posts')}}">Posts </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#">Vogites </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="{{route('dashboard.create-categories')}}">Categories</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="#">Make we talk</a>
+                </li>
 
         <li class="nav-item dropdown" style="position:absolute; left:87%;">
           <a class="nav-link dropdown-toggle"

@@ -4,28 +4,33 @@
 
 @section('content')
 
-<div class="row" id="posts">
-	<div class="col-md-4 col-md offset-2">
-	<h1>Categories</h1>
+<div class="container">
+	<div class="row">
+	<div class="col-md-5 col-md offset-1" id="showcat">
+	<h4 style="text-align: center; font-weight: bold;">Categories</h1>
 		<table class="table">
 		 <thead>
 		 	<tr>
-		 		<th>#</th>
-		 		<th>Name</th>
+		 		<th>S/N</th>
+				 <th>Name</th>
+				 <th>Icon</th>
+				 <th>Action</th>
 		 	</tr>
 		 </thead>
 		 <tbody>
 		 @foreach($categories as $category)
 		 	<tr>
 		 		<th>{{$category->id}}</th>
-		 		<td>{{$category->name}}</td>
+				 <td>{{$category->name}}</td>
+				 <td>  <img src="/storage/category/{{$category->photo}}" alt="" style="width: 50px; height: 50px;"></td>
+				 <td><a href="{{route('dashboard.edit-categories',$category->id)}}"><button class=" btn-sm">Edit</button></a></td>
 		 	</tr>
 		 	@endforeach
 		 </tbody>
 
 		</table>
 	</div>
-	<div class="col-md-4">
+	<div class="col-md-5" id="createcat">
 	<form action="{{route('dashboard.store-categories')}}" method="post" enctype="multipart/form-data">
 		{{ csrf_field() }}
 			<div class="form-group">
@@ -41,5 +46,6 @@
 				</div>
 	    </form>
 	</div>
+</div>
 </div>
 @endsection

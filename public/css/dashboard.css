@@ -24,6 +24,54 @@ button[type="submit"] {
     left: 105%;
 }
 
-#posts {
+#showpost {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#createcat {
+    margin-top: 65px;
+    margin-bottom: 50px;
+}
+
+#showcat {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+div#container-div {
+    text-align: center;
+}
+
+#post-img {
+    width: 350px;
+    height: 350px;
+}
+
+p#para-title {
+    font-size: 12px;
+    margin-bottom: 5px;
     margin-top: 30px;
 }
+
+div#line-break {
+    border-bottom: 2px solid #ccc;
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+span {
+    margin-bottom: 10px;
+}
+
+#form-wrapper {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#edit-btn {}

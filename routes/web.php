@@ -36,14 +36,21 @@ Route::post('dashboard/store-mwt', ['uses'=>'DashboardController@store2', 'as'=>
 Route::get('dashboard/show-mwt/{id}', ['uses'=>'DashboardController@show2','as'=>'dashboard.show-mwt']);
 
 //dashboard routes for posts
+Route::get('dashboard/index-posts',['uses'=>'DashboardController@index3','as'=>'dashboard.index-posts']);
 Route::get('dashboard/create-posts', ['uses'=>'DashboardController@create3', 'as'=>'dashboard.create-posts']);
 Route::post('dashboard/store-posts', ['uses'=>'DashboardController@store3', 'as'=>'dashboard.store-posts']);
 Route::get('dashboard/show-posts/{id}', ['uses'=>'DashboardController@show3','as'=>'dashboard.show-posts']);
+Route::get('dashboard/edit-posts/{id}/edit',['uses'=>'DashboardController@edit3', 'as'=>'dashboard.edit-posts']);
+Route::put('dashboard/update-posts/{id}',['uses'=>'DashboardController@update3', 'as'=>'dashboard.update-posts']);
+Route::delete('dashboard/delete-posts/{id}',['uses'=>'DashboardController@delete3', 'as'=>'dashboard.delete-posts']);
+
 
 //dashboard routes for categories
 Route::get('dashboard/create-categories', ['uses'=>'DashboardController@create4', 'as'=>'dashboard.create-categories']);
 Route::post('dashboard/store-categories', ['uses'=>'DashboardController@store4', 'as'=>'dashboard.store-categories']);
 Route::get('dashboard/{category}', ['uses'=>'DashboardController@show4','as'=>'dashboard.show-categories']);
+Route::get('dashboard/edit-categories/{id}/edit',['uses'=>'DashboardController@edit4', 'as'=>'dashboard.edit-categories']);
+Route::put('dashboard/update-categories/{id}',['uses'=>'DashboardController@update4','as'=>'dashboard.update-categories']);
 
 
 

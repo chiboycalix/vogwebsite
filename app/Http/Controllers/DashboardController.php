@@ -10,6 +10,7 @@ use App\Post;
 use App\Comment;
 use App\Category;
 use App\User;
+use Storage;
 
 class DashboardController extends Controller
 {
@@ -87,7 +88,7 @@ class DashboardController extends Controller
     }
 
 
-    //crreate make we talk
+    //create make we talk
     public function create2()
     {
         return view('admin.dashboard.create-mwt');
@@ -137,11 +138,21 @@ class DashboardController extends Controller
     }
 
     //Create posts
+
+    public function index3(){
+        $posts =Post::orderBy('id','desc')->get();
+        $categories =Category::all();
+        return view('admin.dashboard.index-posts')
+        ->withPosts($posts)
+        ->withCategories($categories);
+    }
+
     public function create3()
     {
         $categories = Category::all();
         return view('admin.dashboard.create-posts')->withCategories($categories);
     }
+
     public function store3(Request $request)
     {
 
@@ -189,6 +200,59 @@ class DashboardController extends Controller
         ->withCategories($categories);
     }
 
+    public function edit3($id){
+        $post =Post::find($id);
+        $categories =Category::all();
+        return view('admin.dashboard.edit-posts')
+        ->withPost($post)
+        ->withCategories($categories);
+    }
+
+    public function update3(Request $request, $id){
+
+       $this->validate($request,array(
+        'title'=>'required',
+        'body' =>'required'
+       ));
+
+
+       if($request->hasFile('photo')){
+        //get file name with extension
+        $filenameWithExt = $request->file('photo')->getClientOriginalName();
+        //get file name
+        $filename = pathinfo($filenameWithExt,PATHINFO_FILENAME);
+        //get file extension
+        $extension = $request->file('photo')->getClientOriginalExtension();
+        //file name to store
+        $fileNameToStore = $filename.'_'.time().'.'.$extension;
+        //upload image
+        $path = $request->file('photo')->storeAs('public/posts', $fileNameToStore);
+     }
+
+        $post =Post::find($id);
+        $post->title = $request->title;
+        $post->category_id = $request->category_id;
+        $post->body = $request->body;
+
+        if($request->hasFile('photo')){
+            $post->photo =$fileNameToStore;
+        }
+        $post->save();
+        Session::flash('success','Post has been Edited Successfully');
+        return redirect()->route('dashboard.show-posts', $post->id);
+
+    }
+
+    public function delete3($id){
+        $post =Post::find($id);
+        if($post->photo != 'noimage.jpg'){
+            Storage::delete('public/posts'.$post->photo);
+        }
+        $post->delete();
+        Session::flash('success','The post was successfully deleted');
+        return redirect()->route('dashboard.index-posts');
+    }
+
     //create categories controller functions
     public function create4()
     {
@@ -224,6 +288,42 @@ class DashboardController extends Controller
            $category->save();
 
            Session::flash('success','New Category Created!');
+
+           return redirect()->route('dashboard.create-categories')->withCategory($category);
+    }
+
+    public function edit4($id){
+        $category = Category::find($id);
+        return view('admin.dashboard.edit-categories')
+        ->withCategory($category);
+    }
+
+    public function update4(Request $request, $id){
+        $this->validate($request,array(
+            'name' =>'required|max:255',
+               ));
+
+               if($request->hasFile('photo')){
+                //get file name with extension
+                $filenameWithExt = $request->file('photo')->getClientOriginalName();
+                //get file name
+                $filename = pathinfo($filenameWithExt,PATHINFO_FILENAME);
+                //get file extension
+                $extension = $request->file('photo')->getClientOriginalExtension();
+                //file name to store
+                $fileNameToStore = $filename.'_'.time().'.'.$extension;
+                //upload image
+                $path = $request->file('photo')->storeAs('public/category', $fileNameToStore);
+             }
+
+           $category =Category::find($id);
+           $category->name = $request->name;
+           if($request->hasFile('photo')){
+            $category->photo =$fileNameToStore;
+        }
+           $category->save();
+
+           Session::flash('success','Category Updated!');
 
            return redirect()->route('dashboard.create-categories')->withCategory($category);
     }

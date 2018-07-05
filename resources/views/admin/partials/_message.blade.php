@@ -7,9 +7,14 @@
 <div class="alert alert-danger">
 <ul>
     <strong>Errors: </strong>
-     @foreach($errors as $error)
+     @foreach($errors->all() as $error)
       <li>{{$error}}</li>
       @endforeach
     </ul>
+</div>
+@endif
+@if(Session('error'))
+<div class="alert alert-danger">
+  {{session('error')}}
 </div>
 @endif
