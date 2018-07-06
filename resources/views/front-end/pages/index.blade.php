@@ -85,20 +85,20 @@
                       <div class="row">
                         <div class="col-lg-4 box">
                           <i class="ion-ios-bookmarks-outline"></i>
-                          <h4 class="title"><a href="">Lorem Ipsum Delino</a></h4>
+                          <h4 class="title"><a href="">About Us</a></h4>
                           <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
                         </div>
 
                   <div class="col-lg-4 box box-bg">
                     <i class="ion-ios-stopwatch-outline"></i>
-                    <h4 class="title"><a href="">Dolor Sitema</a></h4>
-                    <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+                    <h4 class="title"><a href="">Our Mission</a></h4>
+                    <p class="description">Demonstrating God's love through mutual creation and development of great ideas dedicated to our collective growth</p>
                   </div>
 
                   <div class="col-lg-4 box">
                     <i class="ion-ios-heart-outline"></i>
-                    <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-                    <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                    <h4 class="title"><a href="">Our Vision</a></h4>
+                    <p class="description">To build a Formidable force of great minds knitted in love for kingdom exploits and impacts</p>
                   </div>
 
     </div>
@@ -108,7 +108,7 @@
                         <!--==========================
                           About Us Section
                         ============================-->
-   <section id="about">
+   {{--  <section id="about">
        <div class="container">
             <header class="section-header">
                   <h3>About Us</h3>
@@ -157,7 +157,7 @@
       </div>
 
     </div>
-  </section><!-- #about -->
+  </section><!-- #about -->  --}}
 
   <!--==========================
     Services Section

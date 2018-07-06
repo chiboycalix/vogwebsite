@@ -13,7 +13,7 @@
           <a class="nav-link" href="{{route('dashboard.index-posts')}}">Posts</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="#">Vogites </a>
+            <a class="nav-link" href="{{route('dashboard.index-members')}}">Vogites </a>
             </li>
             <li class="nav-item ">
               <a class="nav-link" href="{{route('dashboard.create-categories')}}">Categories</a>

@@ -18,7 +18,7 @@
           {{-- </ul> --}}
           <ul class="mwt-links">
             <li><a href="#">Latest</a></li>
-            <li><a href="#">All</a></li>
+            <li><a href="{{route('mwt.index2')}}">All</a></li>
 
           </ul>
         </div>

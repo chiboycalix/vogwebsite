@@ -386,3 +386,7 @@
         position: relative;
         top: 200px;
     }
+    
+    #paginate-div {
+        margin-left: 60px;
+    }

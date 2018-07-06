@@ -31,7 +31,7 @@
                 @endforeach
 
               </div>
-              {!!$posts->links()!!}
+               <div id="paginate-div"> {!!$posts->links()!!}</div>
 
             </div>
 

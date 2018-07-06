@@ -30,6 +30,12 @@ Route::get('dashboard', ['uses'=>'DashboardController@index', 'as'=>'dashboard']
 Route::get('dashboard/create-members', ['uses'=>'DashboardController@create', 'as'=>'dashboard.create']);
 Route::post('dashboard/store-members', ['uses'=>'DashboardController@store', 'as'=>'dashboard.store-members']);
 Route::get('dashboard/show-members/{id}', ['uses'=>'DashboardController@show','as'=>'dashboard.show-members']);
+Route::get('dashboard/index-members', ['uses'=>'DashboardController@indexm','as'=>'dashboard.index-members']);
+Route::get('dashboard/edit-members/{id}/edit',['uses'=>'DashboardController@edit', 'as'=>'dashboard.edit-members']);
+Route::put('dashboard/update-members/{id}',['uses'=>'DashboardController@update', 'as'=>'dashboard.update-members']);
+Route::delete('dashboard/delete-members/{id}',['uses'=>'DashboardController@delete', 'as'=>'dashboard.delete-members']);
+
+
 //Dashboard routes for make we talk
 Route::get('dashboard/create-mwt', ['uses'=>'DashboardController@create2', 'as'=>'mwt.create-mwt']);
 Route::post('dashboard/store-mwt', ['uses'=>'DashboardController@store2', 'as'=>'dashboard.store-mwt']);
@@ -37,7 +43,7 @@ Route::get('dashboard/show-mwt/{id}',['uses'=>'DashboardController@show2','as'=>
 Route::get('dashboard/index-mwt', ['uses'=>'DashboardController@index2','as'=>'dashboard.index-mwt']);
 Route::get('dashboard/edit-mwt/{id}/edit',['uses'=>'DashboardController@edit2', 'as'=>'dashboard.edit-mwt']);
 Route::put('dashboard/update-mwt/{id}',['uses'=>'DashboardController@update2', 'as'=>'dashboard.update-mwt']);
-
+Route::delete('dashboard/delete-mwt/{id}',['uses'=>'DashboardController@delete2', 'as'=>'dashboard.delete-mwt']);
 
 //dashboard routes for posts
 Route::get('dashboard/index-posts',['uses'=>'DashboardController@index3','as'=>'dashboard.index-posts']);
@@ -61,9 +67,8 @@ Route::put('dashboard/update-categories/{id}',['uses'=>'DashboardController@upda
 
 //Make we talk routes
 Route::get('mwt/show-mwt/{id}', ['uses'=>'MwtController@show2','as'=>'mwt.show2']);
+Route::get('mwt/index2', ['uses'=>'MwtController@index2','as'=>'mwt.index2']);
 
-//Home routes
-Route::get('/default', ['uses' => 'DefaultController@index', 'as'=>'default.index']);
 
 //Post routes
 Route::post('posts/store', ['uses'=>'PostController@store', 'as'=>'posts.store']);

@@ -37,6 +37,12 @@ class DashboardController extends Controller
      * @return \Illuminate\Http\Response
      */
     //Create Memebers/vogites
+    public function indexm(){
+        $members = Member::all();
+        return view('admin.dashboard.index-members')
+        ->withMembers($members);
+    }
+
     public function create()
     {
         return view('admin.dashboard.create-members');
@@ -85,6 +91,69 @@ class DashboardController extends Controller
     {
         $member = Member::find($id);
         return view('admin.dashboard.show-members')->withMember($member);
+    }
+
+
+    public function edit($id)
+    {
+        $member = Member::find($id);
+        return view('admin.dashboard.edit-members')
+        ->withMember($member);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $this->validate($request,array(
+            'name'=>'required',
+            'email'=>'required',
+            'number'=>'required',
+            'address' =>'required',
+            'dob' =>'required',
+            'biography' =>'required'
+           ));
+
+
+           if($request->hasFile('photo')){
+            //get file name with extension
+            $filenameWithExt = $request->file('photo')->getClientOriginalName();
+            //get file name
+            $filename = pathinfo($filenameWithExt,PATHINFO_FILENAME);
+            //get file extension
+            $extension = $request->file('photo')->getClientOriginalExtension();
+            //file name to store
+            $fileNameToStore = $filename.'_'.time().'.'.$extension;
+            //upload image
+            $path = $request->file('photo')->storeAs('public/photos', $fileNameToStore);
+         }
+
+            $member =Member::find($id);
+            $member->name = $request->name;
+            $member->email = $request->email;
+            $member->number = $request->number;
+            $member->address = $request->address;
+            $member->dob = $request->dob;
+            $member->biography = $request->biography;
+
+
+            if($request->hasFile('photo')){
+                $member->photo =$fileNameToStore;
+            }
+            $member->save();
+            Session::flash('success','Vogite Data has been Edited Successfully');
+            return redirect()->route('dashboard.show-members', $member->id);
+
+    }
+
+
+    public function delete($id)
+    {
+        $member =Member::find($id);
+        if($member->photo != 'noimage.jpg'){
+            Storage::delete('public/photos'.$member->photo);
+        }
+        $member->delete();
+        Session::flash('success','The Member was successfully deleted');
+        return redirect()->route('dashboard.index-members');
     }
 
 
@@ -188,7 +257,16 @@ class DashboardController extends Controller
 
             }
 
-
+            public function delete2($id)
+            {
+                $mwt =Mwt::find($id);
+                if($mwt->photo != 'noimage.jpg'){
+                    Storage::delete('public/mwt'.$mwt->photo);
+                }
+                $mwt->delete();
+                Session::flash('success','Make we talk successfully deleted');
+                return redirect()->route('dashboard.index-mwt');
+            }
 
 
 
@@ -380,31 +458,4 @@ class DashboardController extends Controller
            return redirect()->route('dashboard.create-categories')->withCategory($category);
     }
 
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

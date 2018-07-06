@@ -14,9 +14,11 @@ class MwtController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index2()
     {
-        //
+        $mwts =Mwt::all();
+        return view('front-end.mwt.index2')
+        ->withMwts($mwts);
     }
 
     /**
@@ -24,14 +26,14 @@ class MwtController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-   
+
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-        
+
 
     /**
      * Display the specified resource.
@@ -39,7 +41,7 @@ class MwtController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-       
+
     public function show2($id)
     {
         $mwt = Mwt::find($id);

@@ -3,7 +3,7 @@
 @section('title',' | Create Categories')
 
 @section('content')
-<div class="container">
+<div class="container" id="edit-category">
     <div class="row">
         <div class="col-md-6 col-md offset-3">
                 {!!Form::model($category,['route'=>['dashboard.update-categories',$category->id],'method'=>'PUT','enctype'=>'multipart/form-data'])!!}

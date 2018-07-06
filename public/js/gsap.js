@@ -5,7 +5,7 @@ $(document).ready(function() {
     TweenMax.to(".myclass", 5, { scale: 1.44, ease: Bounce.easeOut });
 
 
-    TweenMax.from('img#gsap-img', 5, { scale: 0.5, opacity: 0.5, ease: Bounce.easeOut, onComplete: complete });
+    TweenMax.from('img#gsap-img', 5, { scale: 0.9, opacity: 0.5, ease: Bounce.easeOut, onComplete: complete });
     TweenMax.to('a#vogbtn', 2, { scale: 1.8 });
 
     TweenMax.from('a.bg-logo img', 3, { x: -700, ease: Power1.easeOut });

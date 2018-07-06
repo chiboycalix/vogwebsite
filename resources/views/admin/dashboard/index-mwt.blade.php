@@ -17,9 +17,9 @@
 
                     <a href="{{route('dashboard.show-mwt',$mwt->id)}}"><button class="btn btn-primary btn-sm">view</button></a>
                     <a href="{{route('dashboard.edit-mwt',$mwt->id)}}"><button class="btn btn-success btn-sm">edit</button></a>
-                     {{-- {!!Form::open(['route'=>['dashboard.delete-posts',$mwt->id],'method'=>'DELETE','enctype'=>'multipart/form-data'])!!}
+                     {!!Form::open(['route'=>['dashboard.delete-mwt',$mwt->id],'method'=>'DELETE','enctype'=>'multipart/form-data'])!!}
                      {{ Form::submit('Delete',['class' =>'btn btn-danger btn-sm','id'=>'postdelete-btn'])}}
-                     {!!Form::close()!!} --}}
+                     {!!Form::close()!!}
                      <div id="line-break"></div>
                  </div>
 
